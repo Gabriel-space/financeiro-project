@@ -1,0 +1,14 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\CategoriaController;
+
+Route::apiResource(
+    'categorias',
+    CategoriaController::class
+)->only([
+    'index',
+    'store',
+    'update',
+    'destroy',
+]);
