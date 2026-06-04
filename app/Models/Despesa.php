@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Receita extends Model
+class Despesa extends Model
 {
     use SoftDeletes;
 
@@ -13,9 +13,8 @@ class Receita extends Model
         'categoria_id',
         'descricao',
         'valor',
-        'data_recebimento',
+        'data_pagamento',
     ];
-
     public function categoria()
     {
         return $this->belongsTo(Categoria::class);
