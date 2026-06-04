@@ -1,6 +1,6 @@
 <template>
     <DashboardLayout titulo="Despesas">
-        <div class="bg-white rounded-[28px] p-8 shadow-sm mb-6">
+        <div class="bg-white rounded-[12px] p-8 shadow-sm mb-6">
             <h3 class="text-xl font-semibold mb-6">Nova Despesa</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-[28px] p-8 shadow-sm">
+        <div class="bg-white rounded-[12px] p-8 shadow-sm">
             <h3 class="text-xl font-semibold mb-6">Despesas cadastradas</h3>
 
             <table class="w-full">

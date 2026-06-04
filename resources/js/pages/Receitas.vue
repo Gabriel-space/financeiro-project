@@ -1,7 +1,7 @@
 <template>
     <DashboardLayout titulo="Receitas">
 
-        <div class="bg-white rounded-[28px] p-8 shadow-sm mb-6">
+        <div class="bg-white rounded-[15px] p-8 shadow-sm mb-6">
             <h3 class="text-xl font-semibold mb-6">
                 Nova Receita
             </h3>
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-[28px] p-8 shadow-sm">
+        <div class="bg-white rounded-[15px] p-8 shadow-sm">
 
             <h3 class="text-xl font-semibold mb-6">
                 Receitas cadastradas
