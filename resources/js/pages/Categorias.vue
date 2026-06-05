@@ -1,6 +1,6 @@
 <template>
     <DashboardLayout titulo="Categorias">
-        <form @submit.prevent="salvarCategoria" class="bg-white rounded-[15px] p-8 shadow-sm mb-6">
+        <form @submit.prevent="salvarCategoria" class="bg-white rounded-[11px] p-8 shadow-sm mb-6">
             <h3 class="text-xl font-semibold mb-6">Nova Categoria</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -28,7 +28,7 @@
             </div>
         </form>
 
-        <div class="bg-white rounded-[15px] p-8 shadow-sm">
+        <div class="bg-white rounded-[11px] p-8 shadow-sm">
             <h3 class="text-xl font-semibold mb-6">Categorias cadastradas</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

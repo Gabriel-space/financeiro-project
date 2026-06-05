@@ -3,48 +3,37 @@
 namespace App\Observers;
 
 use App\Models\Categoria;
+use App\Models\LogAtividade;
 
 class CategoriaObserver
 {
-    /**
-     * Handle the Categoria "created" event.
-     */
     public function created(Categoria $categoria): void
     {
-        \Log::info(
-        'Categoria criada: ' . $categoria->nome
-        );
+        LogAtividade::create([
+            'acao' => 'criado',
+            'modelo' => 'Categoria',
+            'registro_id' => $categoria->id,
+            'descricao' => "Categoria criada: {$categoria->nome}",
+        ]);
     }
 
-    /**
-     * Handle the Categoria "updated" event.
-     */
     public function updated(Categoria $categoria): void
     {
-        //
+        LogAtividade::create([
+            'acao' => 'atualizado',
+            'modelo' => 'Categoria',
+            'registro_id' => $categoria->id,
+            'descricao' => "Categoria atualizada: {$categoria->nome}",
+        ]);
     }
 
-    /**
-     * Handle the Categoria "deleted" event.
-     */
     public function deleted(Categoria $categoria): void
     {
-        //
-    }
-
-    /**
-     * Handle the Categoria "restored" event.
-     */
-    public function restored(Categoria $categoria): void
-    {
-        //
-    }
-
-    /**
-     * Handle the Categoria "force deleted" event.
-     */
-    public function forceDeleted(Categoria $categoria): void
-    {
-        //
+        LogAtividade::create([
+            'acao' => 'excluído',
+            'modelo' => 'Categoria',
+            'registro_id' => $categoria->id,
+            'descricao' => "Categoria excluída: {$categoria->nome}",
+        ]);
     }
 }

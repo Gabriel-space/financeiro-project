@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class LogAtividade extends Model
+{
+    protected $fillable = [
+        'acao',
+        'modelo',
+        'registro_id',
+        'descricao',
+    ];
+}
