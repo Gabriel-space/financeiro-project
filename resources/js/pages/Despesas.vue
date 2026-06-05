@@ -1,6 +1,6 @@
 <template>
     <DashboardLayout titulo="Despesas">
-        <form @submit.prevent="salvarDespesa" class="bg-white rounded-[15px] p-8 shadow-sm mb-6">
+        <form @submit.prevent="salvarDespesa" class="bg-white rounded-[11px] p-8 shadow-sm mb-6">
             <h3 class="text-xl font-semibold mb-6">
                 {{ despesaEditando ? 'Editar Despesa' : 'Nova Despesa' }}
             </h3>
@@ -51,7 +51,7 @@
             </div>
         </form>
 
-        <div class="bg-white rounded-[15px] p-8 shadow-sm">
+        <div class="bg-white rounded-[11px] p-8 shadow-sm">
             <h3 class="text-xl font-semibold mb-6">
                 Despesas cadastradas
             </h3>

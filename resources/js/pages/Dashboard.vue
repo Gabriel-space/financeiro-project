@@ -1,31 +1,30 @@
 <template>
-    <DashboardLayout titulo="Dashboard">
-
+    <DashboardLayout titulo="Dashboard"">
         <div class="flex justify-end mb-6">
             <button
                 @click="gerarPdf"
-                class="flex items-center gap-2 bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:opacity-90">
+                class="flex items-center gap-2 bg-red-800 text-white px-5 py-3 rounded-2xl font-semibold hover:opacity-90">
                 <FileText :size="18" />
                 Gerar PDF
             </button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-7 rounded-[15px] shadow-md">
+            <div class="bg-white p-7 rounded-[11px] shadow-md">
                 <p class="text-slate-500 text-sm">Receitas</p>
                 <h2 class="text-3xl font-bold text-emerald-600 mt-2">
                     {{ formatarMoeda(resumo.total_receitas) }}
                 </h2>
             </div>
 
-            <div class="bg-white p-7 rounded-[15px] shadow-md">
+            <div class="bg-white p-7 rounded-[11px] shadow-md">
                 <p class="text-slate-500 text-sm">Despesas</p>
-                <h2 class="text-3xl font-bold text-red-500 mt-2">
+                <h2 class="text-3xl font-bold text-red-600 mt-2">
                     {{ formatarMoeda(resumo.total_despesas) }}
                 </h2>
             </div>
 
-            <div class="bg-white p-7 rounded-[15px] shadow-md">
+            <div class="bg-white p-7 rounded-[11px] shadow-md">
                 <p class="text-slate-500 text-sm">Saldo Atual</p>
                 <h2 class="text-3xl font-bold text-slate-800 mt-2">
                     {{ formatarMoeda(resumo.saldo) }}
@@ -34,7 +33,7 @@
         </div>
 
         <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-white p-7 rounded-[15px] shadow-md">
+            <div class="bg-white p-7 rounded-[11px] shadow-md">
                 <h3 class="text-xl font-semibold mb-4">Últimas receitas</h3>
 
                 <div v-for="receita in resumo.ultimas_receitas" :key="receita.id" class="border-b py-3">
@@ -46,13 +45,13 @@
                 </div>
             </div>
 
-            <div class="bg-white p-7 rounded-[15px] shadow-md">
+            <div class="bg-white p-7 rounded-[11px] shadow-md">
                 <h3 class="text-xl font-semibold mb-4">Últimas despesas</h3>
 
                 <div v-for="despesa in resumo.ultimas_despesas" :key="despesa.id" class="border-b py-3">
                     <p class="font-medium">{{ despesa.descricao }}</p>
                     <p class="text-sm text-slate-500">{{ despesa.categoria?.nome }}</p>
-                    <p class="text-red-500 font-semibold">
+                    <p class="text-red-700 font-semibold">
                         {{ formatarMoeda(despesa.valor) }}
                     </p>
                 </div>
